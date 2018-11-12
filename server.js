@@ -13,8 +13,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Db config
-const db = require("./config/keys").mongoURI;
+// Db config mlab
+//const db = require("./config/keys").mongoURI;
+
+// Db config local
+const db = require("./config/keys").localMongoURI;
 
 // Connect to MongoDB
 mongoose
